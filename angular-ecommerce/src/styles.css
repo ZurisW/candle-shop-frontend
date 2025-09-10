@@ -1,0 +1,365 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Struktura główna aplikacji */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Gwarantuje, że strona zajmuje całą wysokość ekranu */
+}
+
+/* Główna zawartość strony – wypełnia przestrzeń */
+.main-content {
+    flex: 1; /* Wypycha stopkę na dół */
+}
+
+/* Navbar*/
+
+.navbar {
+    background-color: #FFF8E8;
+    color: #6F4E37;
+    padding: 0;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.search-form {
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.form-control {
+    border-color: #6F4E37;
+}
+
+.search-form .input-group {
+    width: 100%; 
+    height: 100%; 
+}
+
+.search-form .form-control {
+    height: 100%; 
+    padding: 0 8px; 
+    font-size: 14px;
+}
+
+.search-form .btn {
+    height: 100%; 
+    padding: 0 12px; 
+    border-color: #6F4E37;
+    color: #6F4E37;
+}
+
+.search-form .btn:hover,.navbar-nav .login-btn:hover {
+    background-color: #6F4E37;
+    color: #FFF8E8; 
+    border-color: #6F4E37;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;   
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo span {
+    color: #6F4E37;
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    position: relative;
+    margin-right: 100px;
+}
+
+.logo span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px; 
+    height: 0.5px; 
+    background-color: #6F4E37; 
+}
+
+.nav-item.dropdown .dropdown-menu {
+    min-width: 200px; 
+}
+
+#categoryList .dropdown-item.active {
+    background-color: #6F4E37 !important; 
+    color: #FED8B1 !important; 
+}
+
+#categoryList .dropdown-item.active:hover {
+    background-color: #6F4E37 !important;  
+    color: #FED8B1 !important; 
+}
+
+
+.navbar-nav .login-btn {
+    background-color: #FED8B1;
+    color: #6F4E37;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5%;
+    height: 30px;
+    width: auto;
+    padding: 0 8px;
+}
+
+.cart i {
+    color: #6F4E37;
+    margin: 0;
+}
+
+.navbar-nav {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto;
+}
+
+
+.collapse.navbar-collapse.show .navbar-nav a {
+    margin-bottom: 10px;
+}
+
+.collapse.navbar-collapse.show button {
+    margin-bottom: 8px;
+}
+
+#categoryList {
+    background-color: #FFF8E8; 
+    border: 1px solid #ccc; 
+}
+
+#categoryList .dropdown-item {
+    color: #6F4E37 !important; 
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+#categoryList .dropdown-item:hover {
+    background-color: #F5E6C8; 
+}
+
+/*Product list*/
+
+img{
+    max-width:100%;
+    height:150px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:#333;
+    font-weight:700;
+    margin:0;
+    line-height:1.2
+}
+
+h1{
+    font-size:36px
+}
+
+.no-underline {
+    text-decoration: none;
+}
+.product-box img {
+    width: 150px;
+}
+
+.items select {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    outline: 0;
+    margin-left: 5px;
+}
+.product-box{
+    margin-bottom:60px
+}
+
+.product-name {
+    color: #6F4E37;
+    font-weight: bold;
+}
+
+.price{
+    margin:15px 0 0;
+    font-weight:800;
+    color:#be6605
+}
+.product-box h1{
+    font-size:18px;
+    border-bottom:1px solid #6F4E37;
+    padding-bottom:5px;
+    font-weight:600;
+    padding-top:12px;
+    margin-bottom:7px
+}
+.product-box h2{
+    font-size:15px;
+    padding-bottom:0;
+    font-weight:500;
+    color:#585858
+}
+
+.add-to-cart-btn {
+    background-color: #be6605 !important;  
+    color: #fff !important;  
+    border: none !important;  
+    border-radius: 5px !important;  
+    padding: 10px 10px !important;  
+    font-weight: bold !important; 
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #9e5300 !important;  
+    transform: scale(1.05) !important;  
+}
+
+.custom-back-link {
+    color: #6F4E37 !important;
+    border-color: #6F4E37 !important;
+}
+
+.custom-back-link:hover {
+    background-color: #6F4E37 !important;
+    color: white !important;
+}
+
+.product-image {
+    min-height: 546px; 
+    max-height: 80vh;
+    width: auto; 
+    object-fit: contain; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) { 
+    .product-image {
+        min-height: 300px; 
+        max-height: 60vh; 
+    }
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 730px; 
+}
+
+
+.product-list {
+    flex-grow: 1;
+}
+
+.footer-pagination {
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+@media (min-height: 800px) {
+    .footer-pagination {
+        margin-top: 30px;
+    }
+}
+
+.product-page-select-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 10px;
+}
+
+.product-page-label {
+    min-width: 180px; 
+    text-align: right;
+}
+
+.product-page-select {
+    width: 60px !important;
+    text-align: center;
+    padding: 2px; 
+}
+
+.no-products-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8d7da; 
+    color: #721c24;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.no-products-message i {
+    font-size: 24px; 
+}
+
+.no-products-message span {
+    font-weight: 600;
+}
+
+/* Cart details */
+/* Przycisk Opróżnij koszyk */
+.btn-warning {
+    background-color: #9e5300; /* Ciemny pomarańczowy */
+    color: white; /* Kolor tekstu */
+    border-radius: 4px; /* Zaokrąglone rogi, ale subtelniejsze */
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 1px solid #9e5300; /* Obramowanie w tym samym kolorze */
+    font-size: 16px; /* Zwiększenie rozmiaru czcionki */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efekt hover dla przycisku Opróżnij koszyk */
+.btn-warning:hover {
+    background-color: #6F4E37; /* Brązowy kolor */
+    transform: scale(1.05); /* Powiększenie przycisku */
+}
+
+/* Przycisk Dalej */
+.btn-primary {
+    background-color: #FED8B1; /* Jasny, elegancki żółty */
+    color: #6F4E37; /* Ciemny brązowy tekst */
+    border-radius: 4px; /* Subtelne zaokrąglenie */
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 1px solid #FED8B1; /* Obramowanie w tym samym kolorze */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efekt hover dla przycisku Dalej */
+.btn-primary:hover {
+    background-color: #6F4E37; /* Brązowy kolor */
+    color: white; /* Biały tekst po najechaniu */
+    transform: scale(1.05); /* Powiększenie przycisku */
+}
